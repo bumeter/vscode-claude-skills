@@ -4,6 +4,7 @@ import type { Hit, Page, Tool } from '../src/types';
 import type { Bridge } from './bridge';
 import { h } from './dom';
 import { compact } from './fmt';
+import { arrowNav } from './grid';
 import { t } from './strings';
 
 export type Mode = 'hot' | 'trending' | 'all-time';
@@ -98,17 +99,7 @@ export function mountInstall(root: HTMLElement, deps: InstallDeps): { focusSearc
     status.replaceChildren(...parts.filter((p): p is HTMLElement => !!p));
   }
 
-  /** Arrow keys move between cards in reading order, a row at a time up and down. */
-  grid.addEventListener('keydown', (e) => {
-    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(e.key)) return;
-    const cards = [...grid.querySelectorAll<HTMLElement>('.card')];
-    const i = cards.indexOf(document.activeElement as HTMLElement);
-    if (i < 0) return;
-    e.preventDefault();
-    const perRow = Math.max(1, cards.filter((c) => c.offsetTop === cards[0].offsetTop).length);
-    const step = e.key === 'ArrowLeft' ? -1 : e.key === 'ArrowRight' ? 1 : e.key === 'ArrowUp' ? -perRow : perRow;
-    cards[Math.min(cards.length - 1, Math.max(0, i + step))]?.focus();
-  });
+  arrowNav(grid);
 
   searchBox.addEventListener('input', () => {
     query = searchBox.value;

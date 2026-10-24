@@ -1,9 +1,12 @@
-// The status bar button: how many skills are installed; click opens the Claude Skills tab.
+// The status bar button: "Skill Manager" and how many skills are installed; click opens the Claude Skills tab.
 import * as vscode from 'vscode';
 import type { Lang } from '@bumeter/vscode-kit/format';
 import type { RpcClient } from '@bumeter/vscode-kit/rpc';
 import { t } from './strings';
 import type { Counts } from './types';
+
+/** Same in every language: it is the product's name. */
+const BRAND = 'Skill Manager';
 
 export interface ButtonView { text: string; tooltip: string; level: 'normal' | 'error' }
 
@@ -11,11 +14,11 @@ const LINKS = (lang: Lang) => `[${t(lang, 'open')}](command:claudeSkills.open) �
 
 /** What the button shows. Pure, for tests. */
 export function buttonView(c: Counts | null, err: string | null, lang: Lang): ButtonView {
-  if (err) return { text: '$(book) $(error)', tooltip: `**${t(lang, 'error')}**: ${err}\n\n${LINKS(lang)}`, level: 'error' };
-  if (!c) return { text: `$(sync~spin) ${t(lang, 'loading')}`, tooltip: t(lang, 'tooltipTitle'), level: 'normal' };
+  if (err) return { text: `$(book) ${BRAND} $(error)`, tooltip: `**${t(lang, 'error')}**: ${err}\n\n${LINKS(lang)}`, level: 'error' };
+  if (!c) return { text: `$(sync~spin) ${BRAND}`, tooltip: t(lang, 'tooltipTitle'), level: 'normal' };
   const n = t(lang, c.total === 1 ? 'skillsOne' : 'skills', { n: c.total });
-  const lines = [`**${t(lang, 'tooltipTitle')}**`, t(lang, 'counts', { cc: c.claude_code, kiro: c.kiro }), `_${t(lang, 'countsNote')}_`, LINKS(lang)];
-  return { text: `$(book) ${n}`, tooltip: lines.join('\n\n'), level: 'normal' };
+  const lines = [`**${t(lang, 'tooltipTitle')}** · ${n}`, t(lang, 'counts', { cc: c.claude_code, kiro: c.kiro }), `_${t(lang, 'countsNote')}_`, LINKS(lang)];
+  return { text: `$(book) ${BRAND} · ${c.total}`, tooltip: lines.join('\n\n'), level: 'normal' };
 }
 
 export class SkillsButton implements vscode.Disposable {
@@ -25,7 +28,7 @@ export class SkillsButton implements vscode.Disposable {
 
   constructor(private readonly rpc: Pick<RpcClient, 'call'>, private readonly lang: Lang, click: string, pollMs = 60_000) {
     this.item = vscode.window.createStatusBarItem('claudeSkills.status', vscode.StatusBarAlignment.Right, 99);
-    this.item.name = 'Claude Code Skills';
+    this.item.name = 'Claude Code Skill Manager';
     this.item.command = click;
     this.show(buttonView(null, null, lang));
     this.timer = setInterval(() => void this.refresh(), pollMs);

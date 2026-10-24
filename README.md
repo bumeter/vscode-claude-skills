@@ -1,22 +1,27 @@
 # Claude Code Skills Manager — install, enable and disable skills
 
-Every Claude Code skill you have, in one table inside VS Code: how often each one is used, in how many projects, and what it costs in context. Turn skills on and off, remove the ones you never use, and install new ones from [skills.sh](https://skills.sh), a git URL or a folder. Kiro skills too.
+Every Claude Code skill you have, as cards inside VS Code: how often each one is used, in how many projects, and what it costs in context. Turn skills on and off, remove the ones you never use, and install new ones from [skills.sh](https://skills.sh), a git URL or a folder. Kiro skills too.
 
 ```
-📖 18 skills      ← in the status bar; click to open Claude Skills
+📖 Skill Manager · 18      ← in the status bar; click to open Claude Skills
 ```
 
 ## Installed skills
 
-| | Skill | Source | Uses | Projects | Tokens/session | Always | Last used |
-|---|---|---|---|---|---|---|---|
-| ● | brainstorming | Personal | 42 | 3 | 1.2K | ~60 | yesterday |
-| ● | code-review | Plugin · tools | 17 | 2 | 3.4K | ~120 | 3 days |
-| ○ | pdf | Personal | 0 | – | – | ~125 | never |
+```
+┌─────────────────────────┐ ┌─────────────────────────┐ ┌─────────────────────────┐
+│ ● brainstorming         │ │ ● code-review           │ │ ○ pdf                   │
+│ Personal                │ │ Plugin · tools          │ │ Personal                │
+│ Turn ideas into designs │ │ Review a change before  │ │ Read and fill PDF forms │
+│ 42 uses · 3 projects ·  │ │ 17 uses · 2 projects ·  │ │ Unused for 30 days      │
+│ Always-on ~60 tokens    │ │ Always-on ~120 tokens   │ │ Always-on ~125 tokens   │
+│ [Disable]            ⋯  │ │ [Disable]            ⋯  │ │ [Enable]             ⋯  │
+└─────────────────────────┘ └─────────────────────────┘ └─────────────────────────┘
+```
 
 - **Claude Code / Kiro** tabs, a text filter, and Enabled / Disabled / Unused for 30 days.
-- Click a column to sort. Click a row for its description and path.
-- **Always** is what a skill costs in *every* session (its name and description sit in the context), so unused skills with a high number are the first to turn off.
+- Sort by uses, name, always-on tokens or last used. Click a card (or Enter) for its full description, tokens per session and path; arrow keys move between cards.
+- **Always-on** is what a skill costs in *every* session (its name and description sit in the context), so unused skills with a high number are the first to turn off.
 - **Disable / Enable** a skill or a plugin, **Remove** a personal skill, open its `SKILL.md` or folder. Skills synced from claude.ai are read-only.
 
 ## Install a skill
@@ -38,7 +43,7 @@ Everything is read from the skill folders and Claude Code's logs on the machine 
 
 | Command | |
 |---|---|
-| Claude Skills: Open | The installed skills table |
+| Claude Skills: Open | The installed skills |
 | Claude Skills: Install Skill… | Straight to Install skill |
 | Claude Skills: Refresh | Read the skills again |
 

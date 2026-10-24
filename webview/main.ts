@@ -1,4 +1,4 @@
-// The Claude Skills page: the installed table, and the install screen over it.
+// The Claude Skills page: the installed skills, and the install screen over it.
 import type { Tool } from '../src/types';
 import { bridge, onMessage } from './bridge';
 import { h } from './dom';

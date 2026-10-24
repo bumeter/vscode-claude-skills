@@ -36,7 +36,7 @@ export function activate(ctx: vscode.ExtensionContext): void {
   const bin = findBum({ setting: vscode.workspace.getConfiguration('claudeSkills').get<string>('binaryPath', ''), extensionPath: ctx.extensionPath });
   if (!bin) {
     const item = vscode.window.createStatusBarItem('claudeSkills.status', vscode.StatusBarAlignment.Right, 99);
-    item.text = '$(book) $(warning)';
+    item.text = '$(book) Skill Manager $(warning)';
     item.tooltip = t(lang, 'noBum');
     item.command = { title: t(lang, 'openSettings'), command: 'workbench.action.openSettings', arguments: ['claudeSkills.binaryPath'] };
     item.show();
