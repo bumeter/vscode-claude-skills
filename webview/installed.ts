@@ -67,7 +67,7 @@ export function mountInstalled(root: HTMLElement, deps: InstalledDeps): { reload
       cell: (r) => (r.entry.source.kind === 'plugin' ? `${t('plugin')} · ${r.entry.source.plugin}` : t(SOURCE[r.entry.source.kind] ?? 'personal')) },
     { key: 'uses', label: t('colUses'), align: 'right', sort: byNum((r) => r.uses), cell: (r) => num(r, r.uses) },
     { key: 'projects', label: t('colProjects'), align: 'right', hideBelow: 640, sort: byNum((r) => r.projects), cell: (r) => num(r, r.projects) },
-    { key: 'avg', label: t('colAvg'), align: 'right', hideBelow: 760, sort: byNum((r) => r.avg_tokens), cell: (r) => num(r, r.avg_tokens) },
+    { key: 'avg', label: t('colAvg'), title: t('avgTip'), align: 'right', hideBelow: 760, sort: byNum((r) => r.avg_tokens), cell: (r) => num(r, r.avg_tokens) },
     { key: 'always', label: t('colAlways'), title: t('alwaysTip'), align: 'right', hideBelow: 860, sort: byNum((r) => r.entry.always_on_tokens),
       cell: (r) => (r.entry.always_on_tokens == null ? '–' : `${r.entry.estimated ? '~' : ''}${compact(r.entry.always_on_tokens)}`) },
     { key: 'last', label: t('colLast'), sort: (a, b) => (Date.parse(a.last_used ?? '') || 0) - (Date.parse(b.last_used ?? '') || 0),

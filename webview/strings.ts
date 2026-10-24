@@ -2,7 +2,7 @@
 const STRINGS = {
   vi: {
     filter: 'Lọc…', all: 'Tất cả', enabled: 'Đang bật', disabled: 'Đang tắt', unused: 'Chưa dùng 30 ngày', install: 'Cài skill',
-    colSkill: 'Skill', colSource: 'Nguồn', colUses: 'Lần', colProjects: 'D.án', colAvg: 'Token/lần', colAlways: 'Luôn tốn', colLast: 'Dùng cuối',
+    colSkill: 'Skill', colSource: 'Nguồn', colUses: 'Lần', colProjects: 'D.án', colAvg: 'Token/phiên', avgTip: 'Token trung bình của một phiên có dùng skill này', colAlways: 'Luôn tốn', colLast: 'Dùng cuối',
     personal: 'Cá nhân', plugin: 'Plugin', synced: 'claude.ai', command: 'Lệnh',
     footer: '{n} skill · {off} đang tắt · {unused} chưa dùng 30 ngày', noUsage: 'Chưa có số liệu sử dụng: Bumeter chưa đọc log của bạn.',
     turnOff: 'Tắt', turnOn: 'Bật', remove: 'Gỡ', openFile: 'Mở SKILL.md', openFolder: 'Hiện trong thư mục', copyPath: 'Copy đường dẫn', more: 'Thêm',
@@ -15,7 +15,7 @@ const STRINGS = {
   },
   en: {
     filter: 'Filter…', all: 'All', enabled: 'Enabled', disabled: 'Disabled', unused: 'Unused for 30 days', install: 'Install skill',
-    colSkill: 'Skill', colSource: 'Source', colUses: 'Uses', colProjects: 'Projects', colAvg: 'Tokens/use', colAlways: 'Always', colLast: 'Last used',
+    colSkill: 'Skill', colSource: 'Source', colUses: 'Uses', colProjects: 'Projects', colAvg: 'Tokens/session', avgTip: 'Average tokens of a session that used this skill', colAlways: 'Always', colLast: 'Last used',
     personal: 'Personal', plugin: 'Plugin', synced: 'claude.ai', command: 'Command',
     footer: '{n} skills · {off} disabled · {unused} unused for 30 days', noUsage: 'No usage numbers yet: Bumeter has not read your logs.',
     turnOff: 'Disable', turnOn: 'Enable', remove: 'Remove', openFile: 'Open SKILL.md', openFolder: 'Reveal in folder', copyPath: 'Copy path', more: 'More',
