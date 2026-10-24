@@ -3,7 +3,7 @@
 Every Claude Code skill you have, as cards inside VS Code: how often each one is used, in how many projects, and what it costs in context. Turn skills on and off, remove the ones you never use, and install new ones from [skills.sh](https://skills.sh), a git URL or a folder. Kiro skills too.
 
 ```
-📖 Skill Manager · 18      ← in the status bar; click to open Claude Skills
+📖 Skill Manager · 18      ← in the status bar; click to open Skill Manager
 ```
 
 ## Installed skills
@@ -43,9 +43,9 @@ Everything is read from the skill folders and Claude Code's logs on the machine 
 
 | Command | |
 |---|---|
-| Claude Skills: Open | The installed skills |
-| Claude Skills: Install Skill… | Straight to Install skill |
-| Claude Skills: Refresh | Read the skills again |
+| Skill Manager: Open | The installed skills |
+| Skill Manager: Install Skill… | Straight to Install skill |
+| Skill Manager: Refresh | Read the skills again |
 
 | Setting | Default | |
 |---|---|---|

@@ -22,12 +22,12 @@ function opUi(lang: Lang, after: () => void): OpUi {
           await undo();
           void vscode.window.showInformationMessage(t(lang, 'undone'));
         } catch (e) {
-          void vscode.window.showErrorMessage(`Claude Skills: ${(e as Error).message}`);
+          void vscode.window.showErrorMessage(`Skill Manager: ${(e as Error).message}`);
         }
         after();
       });
     },
-    error: (m) => void vscode.window.showErrorMessage(`Claude Skills: ${m}`),
+    error: (m) => void vscode.window.showErrorMessage(`Skill Manager: ${m}`),
   };
 }
 

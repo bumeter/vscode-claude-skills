@@ -1,4 +1,4 @@
-// The Claude Skills tab: a webview with our own page (webview/), and the bridge between it and `bum rpc`.
+// The Skill Manager tab: a webview with our own page (webview/), and the bridge between it and `bum rpc`.
 // The page may only read (ALLOWED); every change is an `op`, which the extension confirms and applies.
 import * as path from 'node:path';
 import * as vscode from 'vscode';
@@ -37,7 +37,7 @@ export function buildHtml(o: { scriptUri: string; styleUri: string; cspSource: s
 <meta http-equiv="Content-Security-Policy" content="${csp}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${o.styleUri}">
-<title>Claude Skills</title>
+<title>Skill Manager</title>
 </head>
 <body data-start="${o.start}">
 <main id="app"></main>

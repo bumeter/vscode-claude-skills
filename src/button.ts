@@ -1,4 +1,4 @@
-// The status bar button: "Skill Manager" and how many skills are installed; click opens the Claude Skills tab.
+// The status bar button: "Skill Manager" and how many skills are installed; click opens the Skill Manager tab.
 import * as vscode from 'vscode';
 import type { Lang } from '@bumeter/vscode-kit/format';
 import type { RpcClient } from '@bumeter/vscode-kit/rpc';

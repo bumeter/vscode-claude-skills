@@ -1,4 +1,4 @@
-/* Claude Skills: only VS Code's own theme variables, so light, dark and high contrast all follow the editor. */
+/* Skill Manager: only VS Code's own theme variables, so light, dark and high contrast all follow the editor. */
 :root {
   --gap: 12px;
   --radius: 4px;

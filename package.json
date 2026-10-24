@@ -46,19 +46,19 @@
       {
         "command": "claudeSkills.open",
         "title": "Open",
-        "category": "Claude Skills",
+        "category": "Skill Manager",
         "icon": "$(book)"
       },
       {
         "command": "claudeSkills.install",
         "title": "Install Skill…",
-        "category": "Claude Skills",
+        "category": "Skill Manager",
         "icon": "$(add)"
       },
       {
         "command": "claudeSkills.refresh",
         "title": "Refresh",
-        "category": "Claude Skills",
+        "category": "Skill Manager",
         "icon": "$(refresh)"
       }
     ],
