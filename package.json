@@ -41,7 +41,38 @@
   "engines": {
     "vscode": "^1.85.0"
   },
-  "contributes": {},
+  "contributes": {
+    "commands": [
+      {
+        "command": "claudeSkills.open",
+        "title": "Open",
+        "category": "Claude Skills",
+        "icon": "$(book)"
+      },
+      {
+        "command": "claudeSkills.install",
+        "title": "Install Skill…",
+        "category": "Claude Skills",
+        "icon": "$(add)"
+      },
+      {
+        "command": "claudeSkills.refresh",
+        "title": "Refresh",
+        "category": "Claude Skills",
+        "icon": "$(refresh)"
+      }
+    ],
+    "configuration": {
+      "title": "Claude Code Skills Manager",
+      "properties": {
+        "claudeSkills.binaryPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the `bum` command. Empty: the one bundled with the extension, then `bum` on PATH."
+        }
+      }
+    }
+  },
   "scripts": {
     "build": "node esbuild.mjs",
     "watch": "node esbuild.mjs --watch",

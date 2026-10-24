@@ -22,7 +22,7 @@ export interface InstallDeps {
   debounceMs?: number;
 }
 
-export function mountInstall(root: HTMLElement, deps: InstallDeps): { focusSearch(): void } {
+export function mountInstall(root: HTMLElement, deps: InstallDeps): { focusSearch(): void; refresh(): void } {
   let tool: Tool = deps.tool;
   let tab: Tab = 'market';
   let mode: Mode = 'trending';
@@ -156,5 +156,5 @@ export function mountInstall(root: HTMLElement, deps: InstallDeps): { focusSearc
 
   render();
   void fetchPage();
-  return { focusSearch: () => searchBox.focus() };
+  return { focusSearch: () => searchBox.focus(), refresh: () => renderCards() };
 }
