@@ -12,3 +12,4 @@ BUM_VERSION
 **/*.map
 .gitignore
 webview/**
+media/icon.svg
