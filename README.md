@@ -3,7 +3,7 @@
 Every Claude Code skill you have, in one table inside VS Code: how often each one is used, in how many projects, and what it costs in context. Turn skills on and off, remove the ones you never use, and install new ones from [skills.sh](https://skills.sh), a git URL or a folder. Kiro skills too.
 
 ```
-$(book) 18 skills      ← in the status bar; click to open Claude Skills
+📖 18 skills      ← in the status bar; click to open Claude Skills
 ```
 
 ## Installed skills
@@ -32,7 +32,7 @@ Every change is planned first: a dialog shows exactly what will move, link or be
 
 ## Local only
 
-Everything is read from the skill folders and Claude Code's logs on the machine the workspace is on. The only network calls are to skills.sh and GitHub, and only when you open Install skill or install one. No account, no API key. Works in remote windows (SSH, WSL, Dev Containers, Codespaces), and in Cursor and Windsurf.
+Everything is read from the skill folders and Claude Code's logs on the machine the workspace is on. The only network calls are to skills.sh and the git host you install from, and only when you open Install skill or install one. No account, no API key. Works in remote windows (SSH, WSL, Dev Containers, Codespaces), and in Cursor and Windsurf.
 
 ## Commands and settings
 
