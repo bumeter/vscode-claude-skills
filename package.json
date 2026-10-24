@@ -1,7 +1,7 @@
 {
   "name": "bumeter-claude-skills",
   "displayName": "Claude Code Skills Manager — Install, Enable & Disable Skills",
-  "description": "See every Claude Code (and Kiro) skill you have, how often each is used and what it costs in context; turn skills on and off, remove them, and install new ones from skills.sh, a git URL or a folder. Local only. by Bumeter (unofficial, not made by Anthropic).",
+  "description": "Manage Claude Code skills (Agent Skills, SKILL.md) in VS Code: install skills from skills.sh, git or a folder; enable, disable and remove them; see uses and token cost per skill. Kiro too. Local only. By Bumeter (unofficial, not made by Anthropic).",
   "version": "0.1.0",
   "publisher": "bumkom",
   "license": "GPL-3.0-or-later",
@@ -11,19 +11,28 @@
   },
   "homepage": "https://bumeter.cc",
   "categories": [
-    "Other",
-    "AI"
+    "AI",
+    "Other"
   ],
   "keywords": [
     "claude code",
-    "claude",
-    "skills",
+    "claude code skills",
+    "claude skills",
     "agent skills",
-    "skills.sh",
+    "skills",
     "skill manager",
-    "kiro",
+    "skills.sh",
+    "SKILL.md",
+    "install skills",
+    "claude plugins",
+    "claude",
     "anthropic",
+    "kiro",
+    "kiro skills",
+    "ai agent",
     "ai",
+    "context",
+    "tokens",
     "bumeter"
   ],
   "extensionKind": [
@@ -35,7 +44,7 @@
   "main": "./dist/extension.js",
   "icon": "media/icon.png",
   "galleryBanner": {
-    "color": "#1e1e1e",
+    "color": "#2a1f4d",
     "theme": "dark"
   },
   "engines": {
@@ -89,5 +98,8 @@
     "typescript": "^5.6.0",
     "vitest": "^3.2.0",
     "jsdom": "^25.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/bumeter/vscode-claude-skills/issues"
   }
 }

@@ -3,7 +3,7 @@ const STRINGS = {
   vi: {
     filter: 'Lọc…', all: 'Tất cả', enabled: 'Đang bật', disabled: 'Đang tắt', unused: 'Chưa dùng 30 ngày', install: 'Cài skill',
     sortUses: 'Sắp: Lần dùng', sortName: 'Sắp: Tên', sortAlways: 'Sắp: Luôn tốn', sortLast: 'Sắp: Dùng cuối', sortBy: 'Sắp xếp',
-    usesLine: '{uses} lần · {projects} d.án · {last}', alwaysLine: 'Luôn tốn {n} token', alwaysTip: 'Token tốn ở mọi phiên (tên + mô tả)',
+    usesLine: '{uses} · {projects} · {last}', usesN: '{n} lần', usesOne: '{n} lần', projectsN: '{n} d.án', projectsOne: '{n} d.án', alwaysLine: 'Luôn tốn {n} token', alwaysTip: 'Token tốn ở mọi phiên (tên + mô tả)',
     avgLine: 'Trung bình {n} token mỗi phiên có dùng skill này', keysInstalled: '← → ↑ ↓ chọn · Enter mở · / lọc',
     personal: 'Cá nhân', plugin: 'Plugin', synced: 'claude.ai', command: 'Lệnh',
     footer: '{n} skill · {off} đang tắt · {unused} chưa dùng 30 ngày', noUsage: 'Chưa có số liệu sử dụng: Bumeter chưa đọc log của bạn.',
@@ -18,7 +18,7 @@ const STRINGS = {
   en: {
     filter: 'Filter…', all: 'All', enabled: 'Enabled', disabled: 'Disabled', unused: 'Unused for 30 days', install: 'Install skill',
     sortUses: 'Sort: uses', sortName: 'Sort: name', sortAlways: 'Sort: always-on', sortLast: 'Sort: last used', sortBy: 'Sort by',
-    usesLine: '{uses} uses · {projects} projects · {last}', alwaysLine: 'Always-on {n} tokens', alwaysTip: 'Tokens spent in every session (name + description)',
+    usesLine: '{uses} · {projects} · {last}', usesN: '{n} uses', usesOne: '{n} use', projectsN: '{n} projects', projectsOne: '{n} project', alwaysLine: 'Always-on {n} tokens', alwaysTip: 'Tokens spent in every session (name + description)',
     avgLine: 'On average {n} tokens per session that used this skill', keysInstalled: '← → ↑ ↓ select · Enter open · / filter',
     personal: 'Personal', plugin: 'Plugin', synced: 'claude.ai', command: 'Command',
     footer: '{n} skills · {off} disabled · {unused} unused for 30 days', noUsage: 'No usage numbers yet: Bumeter has not read your logs.',

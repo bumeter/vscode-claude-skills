@@ -57,7 +57,8 @@ describe('installed cards', () => {
     expect(brain.querySelector('.card-always')!.textContent).toBe('Always-on ~60 tokens');
     expect(card(root, 'claude_code:tools:code-review').querySelector('.card-source')!.textContent).toBe('Plugin · tools');
     expect(card(root, 'claude_code:pdf').classList.contains('dim')).toBe(true);
-    expect(card(root, 'claude_code:pdf').querySelector('.card-stats')!.textContent).toContain('Unused for 30 days');
+    expect(card(root, 'claude_code:pdf').querySelector('.card-stats')!.textContent).toBe('0 uses · 0 projects · Unused for 30 days');
+    expect(card(root, 'claude_code:docs').querySelector('.card-stats')!.textContent).toBe('1 use · 0 projects · never');
     expect(root.querySelector('footer span')!.textContent).toBe('4 skills · 1 disabled · 1 unused for 30 days');
   });
 

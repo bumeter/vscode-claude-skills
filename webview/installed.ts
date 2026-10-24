@@ -76,7 +76,11 @@ export function mountInstalled(root: HTMLElement, deps: InstalledDeps): { reload
 
   const stats = (r: SkillRow) => {
     const last = r.unused_30d ? t('unused') : ago(r.last_used, now());
-    return t('usesLine', { uses: compact(r.uses), projects: compact(r.projects), last });
+    return t('usesLine', {
+      uses: t(r.uses === 1 ? 'usesOne' : 'usesN', { n: compact(r.uses) }),
+      projects: t(r.projects === 1 ? 'projectsOne' : 'projectsN', { n: compact(r.projects) }),
+      last,
+    });
   };
 
   const card = (r: SkillRow) => {

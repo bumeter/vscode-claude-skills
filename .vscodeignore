@@ -13,3 +13,5 @@ BUM_VERSION
 .gitignore
 webview/**
 media/icon.svg
+media/screenshots/**
+media/social-preview.png
