@@ -2,7 +2,7 @@
   "name": "bumeter-claude-skills",
   "displayName": "Claude Code Skills Manager — Install, Enable & Disable Skills",
   "description": "Manage Claude Code skills (Agent Skills, SKILL.md) in VS Code: install skills from skills.sh, git or a folder; enable, disable and remove them; see uses and token cost per skill. Kiro too. Local only. By Bumeter (unofficial, not made by Anthropic).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "bumkom",
   "license": "GPL-3.0-or-later",
   "repository": {

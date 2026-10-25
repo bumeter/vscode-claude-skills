@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Marketplace page: screenshots, badges and an FAQ; a clearer description.
+- "1 use · 1 project" instead of "1 uses · 1 projects".
+- The status bar tooltip is titled Skill Manager.
+
 ## 0.1.0
 
 First release.
