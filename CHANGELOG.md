@@ -5,6 +5,7 @@
 - Marketplace page: screenshots, badges and an FAQ; a clearer description.
 - "1 use · 1 project" instead of "1 uses · 1 projects".
 - The status bar tooltip is titled Skill Manager.
+- New icon: a grid of skills with the Bumeter flame and an AI sparkle, orange on a dark tile.
 
 ## 0.1.0
 
